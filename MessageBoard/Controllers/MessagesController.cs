@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MessageBoard.Models;
+using System;
 
 namespace MessageBoard.Controllers
 {
@@ -75,6 +76,7 @@ namespace MessageBoard.Controllers
     [HttpPost]
     public async Task<ActionResult<Message>> Post(Message message)
     {
+      // message.Date = DateTime.Today;
       _db.Messages.Add(message);
       await _db.SaveChangesAsync();
 

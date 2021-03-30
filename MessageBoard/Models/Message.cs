@@ -1,3 +1,5 @@
+using System;
+
 namespace MessageBoard.Models
 {
   public class Message
@@ -5,5 +7,6 @@ namespace MessageBoard.Models
     public int MessageId { get; set; }
     public string Topic { get; set; }
     public string Content { get; set; }
+  //   public DateTime Date { get; set; }
   }
 }
